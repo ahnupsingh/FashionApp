@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @particular.name %>
+</p>
+
+<p>
+  <strong>Cus rate:</strong>
+  <%= @particular.cus_rate %>
+</p>
+
+<p>
+  <strong>Emp rate:</strong>
+  <%= @particular.emp_rate %>
+</p>
+
+<%= link_to 'Edit', edit_particular_path(@particular) %> |
+<%= link_to 'Back', particulars_path %>

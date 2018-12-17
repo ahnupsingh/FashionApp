@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bill no:</strong>
+  <%= @bill.bill_no %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @bill.quantity %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @bill.total %>
+</p>
+
+<p>
+  <strong>Advance:</strong>
+  <%= @bill.advance %>
+</p>
+
+<p>
+  <strong>Grand total:</strong>
+  <%= @bill.grand_total %>
+</p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @bill.is_complete %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

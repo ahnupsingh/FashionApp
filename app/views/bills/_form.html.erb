@@ -1,0 +1,54 @@
+<%= simple_form_for @bill, local: true, class: "form", id: "form-inline" do |f| %>
+  <% if bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+      <ul>
+      <% bill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bill_no %>
+    <%= f.text_field :bill_no, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total %>
+    <%= f.text_field :total, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :advance %>
+    <%= f.text_field :advance, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_complete %>
+    <%= f.check_box :is_complete, class: "form-control" %>
+  </div>
+
+  <div class="row form-data-margin">
+    <h1 class="form_header">Particulars</h1>
+    <div id='particulars'>
+      <%= f.simple_fields_for :particulars do |particular| %>
+        <%= render 'particular_fields', :f => particular %>
+      <% end %>
+      <div class='links'>
+        <%= link_to_add_association 'Add Particular', f, :particulars, partial: 'particular_fields', class: "btn btn-primary btn-sm margin-top-btm-8" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

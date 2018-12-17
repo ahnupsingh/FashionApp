@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bill_no: 
+  quantity: 
+  total: 
+  advance: 
+  grand_total: 
+  is_complete: false
+
+two:
+  bill_no: 
+  quantity: 
+  total: 
+  advance: 
+  grand_total: 
+  is_complete: false

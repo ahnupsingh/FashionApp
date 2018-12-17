@@ -1,0 +1,149 @@
+@import "bootstrap";
+@import "bootstrap";
+@import "font-awesome";
+// simple_form helpers
+// @import "simple_form-bootstrap/simple_form-bootstrap";
+@import "notifications";
+
+body {
+    padding-top: 10px;
+  }
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.loading{
+  opacity:0.85;
+  -moz-opacity:0.85;
+  filter:alpha(opacity=45);
+  background-image: url(/assets/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:20;
+}
+
+.notification{
+  margin-top:75px !important;
+  position: absolute;
+  z-index: 999;
+  bottom: 8px;
+  right: 8px;
+  height: 80px;
+  display: block;
+  background: #009436;
+}
+
+.bg-teal {
+      background: #009688;
+    }
+
+    .fashion-nav {
+      background: #f5f5f5;
+    }
+
+    .pad-top-16 {
+      padding-top: 16px;
+    }
+    .margin-top-16 {
+      margin-top: 16px;
+    }
+    .margin-top-btm-8 {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .grey-lighten-5 {
+      background: #f5f5f5;
+    }
+
+    .fashion-footer{
+      margin:16px 0;
+      padding:32px 0;
+    }
+
+    .action-link {
+      padding: 2px 8px;
+      color:#aaaaaa;
+    }
+
+    .foot-hr {
+      border: 2px solid #009688;
+      width: 192px;
+    }
+
+    .forgot-password{
+      padding-left: 16px;
+    }
+
+    .flash{
+      position: absolute;
+      z-index: 999;
+      bottom: 8px;
+      right: 8px;
+      display: block;
+      width: 400px;
+      height: 60px;
+    }
+
+    .login{
+      margin:48px 0;
+      padding:32px 16px;
+      border:1px solid #e0e0e0;
+      box-shadow:2px -2px 6px #eeeeee;
+    }
+
+    .login h3{
+      color:#00acf0;
+      line-height: 36px;
+      font-size:28px;
+    }
+
+    .form_header{
+      color:#00acf0;
+      line-height: 36px;
+      font-size:28px;
+    }
+
+    .alert{
+      text-align: center;
+    }
+
+    .form-data-margin {
+      margin: 8px 0px;
+      padding: 5px 8px;
+    }
+
+    .logo {
+      width: 40px;
+    }
+
+    .scroll {
+      height: 700px;
+      overflow-y: scroll;
+    }
