@@ -1,4 +1,4 @@
-<%= simple_form_for @bill, local: true, class: "form", id: "form-inline" do |f| %>
+<%= simple_form_for @bill, local: true, html: { class: 'form' } do |f| %>
   <% if bill.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
@@ -11,44 +11,54 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :bill_no %>
-    <%= f.text_field :bill_no, class: "form-control" %>
+  <div class = "card grey-lighten-5 ">
+    <div class= "card-body row form-data-margin">
+      <div class="row form-data-margin">
+        <%= f.label :bill_no %>
+        <%= f.text_field :bill_no, class: "form-control" %>
+      </div>
+
+      <div class="row form-data-margin">
+        <%= f.label :is_complete %>
+        <%= f.check_box :is_complete, class: "form-control" %>
+      </div>
   </div>
 
-  <div class="field">
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity, class: "form-control" %>
-  </div>
+  <div>
 
-  <div class="field">
-    <%= f.label :total %>
-    <%= f.text_field :total, class: "form-control" %>
-  </div>
+      <h1 class="form_header">Particulars</h1>
+      <div class="card grey-lighten-5">
+        <div class = "card-body row form-data-margin" id='particulars'>
+          <%= f.simple_fields_for :particulars do |particular| %>
+            <%= render 'particular_fields', :f => particular %>
+          <% end %>
+        </div>
+          <div class='links'>
+            <%= link_to_add_association 'Add Particular', f, :particulars, partial: 'particular_fields', class: "btn btn-primary btn-sm margin-top-btm-8" %>
+          </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :advance %>
-    <%= f.text_field :advance, class: "form-control" %>
-  </div>
+    <div class = "card grey-lighten-5">
+      <div class= "card-body row form-data-margin">
+        <div class="col-4">
+          <%= f.label :total %>
+          <%= f.text_field :total, class: "form-control" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :is_complete %>
-    <%= f.check_box :is_complete, class: "form-control" %>
-  </div>
+        <div class="col-4">
+          <%= f.label :advance %>
+          <%= f.text_field :advance, class: "form-control" %>
+        </div>
 
-  <div class="row form-data-margin">
-    <h1 class="form_header">Particulars</h1>
-    <div id='particulars'>
-      <%= f.simple_fields_for :particulars do |particular| %>
-        <%= render 'particular_fields', :f => particular %>
-      <% end %>
-      <div class='links'>
-        <%= link_to_add_association 'Add Particular', f, :particulars, partial: 'particular_fields', class: "btn btn-primary btn-sm margin-top-btm-8" %>
+        <div class="col-4">
+          <%= f.label :grand_total%>
+          <%= f.text_field :grand_total, class: "form-control", disabled: true %>
+        </div>
       </div>
     </div>
+    <div class="actions">
+      <%= f.submit class: "btn btn-success btn-sm"%>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>

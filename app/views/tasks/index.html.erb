@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Works</h1>
+
+<div class="task-table">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead class="grey-lighten-5">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Bill no</th>
+                <th scope="col">Task particular</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col" colspan="3">
+                  <div class = "float-right">
+                      <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Task <i class="fas fa-user-plus"></i></button>'.html_safe, "/employee/tasks/new/#{@tasks.first.employee_id}" %>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @tasks.each do |task| %>
+                <tr>
+                  <td><%= task.date %></td>
+                  <td><%= task.bill_no %></td>
+                  <td><%= task.task_particular %></td>
+                  <td><%= task.quantity %></td>
+                  <td><%= task.total %></td>
+                  <td><%= link_to 'Show', task %></td>
+                  <td><%= link_to 'Edit', edit_task_path(task) %></td>
+                  <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

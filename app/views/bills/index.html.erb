@@ -1,37 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Bills</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Bill no</th>
-      <th>Quantity</th>
-      <th>Total</th>
-      <th>Advance</th>
-      <th>Grand total</th>
-      <th>Is complete</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bills.each do |bill| %>
-      <tr>
-        <td><%= bill.bill_no %></td>
-        <td><%= bill.quantity %></td>
-        <td><%= bill.total %></td>
-        <td><%= bill.advance %></td>
-        <td><%= bill.grand_total %></td>
-        <td><%= bill.is_complete %></td>
-        <td><%= link_to 'Show', bill %></td>
-        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="emp-table">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead class="grey-lighten-5">
+              <tr>
+                <th scope="col">Bill no</th>
+                <th scope="col">Total</th>
+                <th scope="col">Advance</th>
+                <th scope="col">Grand total</th>
+                <th scope="col">Is complete</th>
+                <th scope="col" colspan="3"></th>
+                  <div class = "float-right">
+                      <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Bill <i class="fas fa-user-plus"></i></button>'.html_safe, new_bill_path %>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+              <tbody>
+                <% @bills.each do |bill| %>
+                  <tr>
+                    <td><%= bill.bill_no %></td>
+                    <td><%= bill.total %></td>
+                    <td><%= bill.advance %></td>
+                    <td><%= bill.grand_total %></td>
+                    <td><%= bill.is_complete %></td>
+                    <td><%= link_to 'Show', bill %></td>
+                    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+                    <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%= link_to 'New Bill', new_bill_path %>

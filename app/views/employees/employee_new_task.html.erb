@@ -1,0 +1,36 @@
+<%= simple_form_for @employee, local: true, html: { class: 'form' } do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+      <ul>
+      <% bill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+    <div class="row">
+      <div class= "col col-md-6 offset-md-3 col-sm-10 offset-sm-1">
+        <div class="login">
+          <h1 class="form_header">New Task</h1>
+          <div id='tasks'>
+            <!-- <%= f.simple_fields_for :tasks do |task| %>
+              <%= render 'task_fields', :f => task %>
+            <% end %> -->
+          <div class='links'>
+            <%= link_to_add_association 'Add Task', f, :tasks, class: "btn btn-primary btn-sm margin-top-btm-8" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+    </div>
+  </div>
+<% end %>

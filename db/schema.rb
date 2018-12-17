@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_17_052845) do
+ActiveRecord::Schema.define(version: 2018_12_17_102542) do
 
   create_table "bills", force: :cascade do |t|
     t.integer "bill_no"
-    t.integer "quantity"
     t.integer "total"
     t.integer "advance"
     t.integer "grand_total"
@@ -25,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_12_17_052845) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "emp_type"
     t.string "address"
     t.string "contact"
     t.datetime "created_at", null: false
@@ -39,6 +38,18 @@ ActiveRecord::Schema.define(version: 2018_12_17_052845) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "bill_id"
+    t.string "quantity"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.date "date"
+    t.integer "bill_no"
+    t.string "task_particular"
+    t.integer "quantity"
+    t.integer "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "employee_id"
   end
 
 end

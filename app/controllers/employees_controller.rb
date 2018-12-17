@@ -7,6 +7,18 @@ class EmployeesController < ApplicationController
     @employees = Employee.all
   end
 
+  def employee_tasks
+    @employee = Employee.find(params[:id])
+    @tasks = @employee.tasks
+  end
+
+  def employee_new_task
+    @employee = Employee.find(params[:id])
+    @task = Task.new
+    @task.employee_id = @employee.id
+    @employee.tasks.build
+  end
+
   # GET /employees/1
   # GET /employees/1.json
   def show
@@ -69,6 +81,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:name, :type, :address, :contact)
+      params.require(:employee).permit(:name, :emp_type, :address, :contact, :id, tasks_attributes: [:date, :bill_no, :task_particular, :quantity, :total, :_destroy])
     end
 end

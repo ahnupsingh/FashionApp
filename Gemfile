@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'font-awesome-rails'
-gem 'jquery-rails', "~> 2.3.0"
+gem 'jquery-rails'
 gem 'cocoon'
 gem 'simple_form'
 

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @task.date %>
+</p>
+
+<p>
+  <strong>Bill no:</strong>
+  <%= @task.bill_no %>
+</p>
+
+<p>
+  <strong>Task particular:</strong>
+  <%= @task.task_particular %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @task.quantity %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @task.total %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
