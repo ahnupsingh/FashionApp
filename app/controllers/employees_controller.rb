@@ -14,8 +14,8 @@ class EmployeesController < ApplicationController
 
   def employee_new_task
     @employee = Employee.find(params[:id])
-    @task = Task.new
-    @task.employee_id = @employee.id
+    # TODO : model
+    @bills = Bill.where(is_complete: false)
     @employee.tasks.build
   end
 
