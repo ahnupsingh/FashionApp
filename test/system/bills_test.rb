@@ -18,7 +18,6 @@ class BillsTest < ApplicationSystemTestCase
     fill_in "Bill No", with: @bill.bill_no
     fill_in "Grand Total", with: @bill.grand_total
     fill_in "Is Complete", with: @bill.is_complete
-    fill_in "Quantity", with: @bill.quantity
     fill_in "Total", with: @bill.total
     click_on "Create Bill"
 
@@ -34,7 +33,6 @@ class BillsTest < ApplicationSystemTestCase
     fill_in "Bill No", with: @bill.bill_no
     fill_in "Grand Total", with: @bill.grand_total
     fill_in "Is Complete", with: @bill.is_complete
-    fill_in "Quantity", with: @bill.quantity
     fill_in "Total", with: @bill.total
     click_on "Update Bill"
 

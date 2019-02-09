@@ -1,39 +1,44 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Bills</h1>
-<div class="emp-table">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="table-responsive">
-          <table class="table text-center">
-            <thead class="grey-lighten-5">
-              <tr>
-                <th scope="col">Bill no</th>
-                <th scope="col">Total</th>
-                <th scope="col">Advance</th>
-                <th scope="col">Grand total</th>
-                <th scope="col">Is complete</th>
-                <th scope="col" colspan="3"></th>
-                  <div class = "float-right">
-                      <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Bill <i class="fas fa-user-plus"></i></button>'.html_safe, new_bill_path %>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-              <tbody>
-                <% @bills.each do |bill| %>
+<div class="">
+  <h1>Bills</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="table-responsive table-striped emp-table">
+        <table class="table text-center">
+          <thead class="grey-lighten-5">
+            <tr>
+              <th scope="col">Bill no</th>
+              <th scope="col">Total</th>
+              <th scope="col">Advance</th>
+              <th scope="col">Grand total</th>
+              <th scope="col">Is complete</th>
+              <th scope="col">
+                <div class = "float-right">
+                    <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Bill <i class="fas fa-user-plus"></i></button>'.html_safe, new_bill_path %>
+                </div>
+              </th>
+            </tr>
+          </thead>
+            <tbody>
+              <% @bills.each do |bill| %>
+                <% if bill.is_complete %>
+                <tr class = "light-blue">
+                <% else %>
                   <tr>
-                    <td><%= bill.bill_no %></td>
-                    <td><%= bill.total %></td>
-                    <td><%= bill.advance %></td>
-                    <td><%= bill.grand_total %></td>
-                    <td><%= bill.is_complete %></td>
-                    <td><%= link_to 'Show', bill %></td>
-                    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-                    <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                  </tr>
                 <% end %>
-              </tbody>
+                  <td><%= bill.bill_no %></td>
+                  <td><%= bill.total %></td>
+                  <td><%= bill.advance %></td>
+                  <td><%= bill.grand_total %></td>
+                  <td><%= bill.is_complete %></td>
+                  <td>
+                    <%= link_to 'Show', bill %>
+                    <%= link_to 'Edit', edit_bill_path(bill) %>
+                    <%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
           </table>
         </div>
       </div>

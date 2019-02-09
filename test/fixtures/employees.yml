@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  type: 
+  emp_type:
   address: MyString
   contact: MyString
 
 two:
   name: MyString
-  type: 
+  emp_type:
   address: MyString
   contact: MyString

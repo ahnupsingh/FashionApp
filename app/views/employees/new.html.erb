@@ -1,13 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class= "col col-md-6 offset-md-3 col-sm-10 offset-sm-1">
-      <div class="login">
-      <h1 class="form_header">Add New Employee</h1>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-      <%= render 'form', employee: @employee %>
+<div  class = "gradient">
+  <div class="container">
+    <div class="row">
+      <div class= "col col-md-6 offset-md-3 col-sm-10 offset-sm-1">
+        <div class="login">
+        <h1 class="form_header">Add New Employee</h1>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= render 'form', employee: @employee %>
+      </div>
+    </div>
     </div>
   </div>
-  </div>
+
 </div>

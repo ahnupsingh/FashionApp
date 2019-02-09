@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bill_no: 
-  quantity: 
-  total: 
-  advance: 
-  grand_total: 
+  bill_no: 1
+  total: 1000
+  advance: 200
+  grand_total: 800
   is_complete: false
 
 two:
-  bill_no: 
-  quantity: 
-  total: 
-  advance: 
-  grand_total: 
+  bill_no: 2
+  total: 2000
+  advance: 300
+  grand_total: 1700
   is_complete: false

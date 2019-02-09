@@ -3,13 +3,13 @@
 one:
   date: 2018-12-17
   bill_no: 1
-  task_particular: MyString
+  task_particular: Coat
   quantity: 1
-  total: 1
+  total: 2000
 
 two:
   date: 2018-12-17
-  bill_no: 1
-  task_particular: MyString
+  bill_no: 2
+  task_particular: Pant
   quantity: 1
-  total: 1
+  total: 450

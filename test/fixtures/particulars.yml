@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: 
-  cus_rate: 
-  emp_rate: 1
+  name: "Coat"
+  cus_rate: 2700
+  emp_rate: 1000
 
 two:
-  name: 
-  cus_rate: 
-  emp_rate: 1
+  name: "Pant"
+  cus_rate: 450
+  emp_rate: 220

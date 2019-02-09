@@ -17,7 +17,7 @@ class BillsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bill" do
     assert_difference('Bill.count') do
-      post bills_url, params: { bill: { advance: @bill.advance, bill_no: @bill.bill_no, grand_total: @bill.grand_total, is_complete: @bill.is_complete, quantity: @bill.quantity, total: @bill.total } }
+      post bills_url, params: { bill: { advance: @bill.advance, bill_no: @bill.bill_no, grand_total: @bill.grand_total, is_complete: @bill.is_complete, total: @bill.total } }
     end
 
     assert_redirected_to bill_url(Bill.last)
@@ -34,7 +34,7 @@ class BillsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bill" do
-    patch bill_url(@bill), params: { bill: { advance: @bill.advance, bill_no: @bill.bill_no, grand_total: @bill.grand_total, is_complete: @bill.is_complete, quantity: @bill.quantity, total: @bill.total } }
+    patch bill_url(@bill), params: { bill: { advance: @bill.advance, bill_no: @bill.bill_no, grand_total: @bill.grand_total, is_complete: @bill.is_complete, total: @bill.total } }
     assert_redirected_to bill_url(@bill)
   end
 
