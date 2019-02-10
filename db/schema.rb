@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_02_09_145351) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "bill_id"
-    t.string "quantity"
+    t.integer "quantity"
   end
 
   create_table "tasks", force: :cascade do |t|
