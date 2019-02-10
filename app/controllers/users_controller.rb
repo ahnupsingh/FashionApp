@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    debugger
     if @user.save
       flash[:success] = "Welcome to the sample App!"
       redirect_to @user

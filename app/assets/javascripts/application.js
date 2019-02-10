@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
+//= require bootstrap
 //= require cocoon
 //= require notifications
 //= require_tree .
