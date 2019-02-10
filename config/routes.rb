@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :employees
   resources :particulars
   resources :bills
+  resources :users
 
   get 'employee/task/:id', to: 'employees#employee_tasks'
   get 'employee/task/new/:id', to: 'employees#employee_new_task'
