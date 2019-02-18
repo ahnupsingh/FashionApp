@@ -1,40 +1,57 @@
 <p id="notice"><%= notice %></p>
-<div>
-  <h1>Employees</h1>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="table-responsive table-striped emp-table">
-        <table class="table text-center">
-          <thead class = "gradient">
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Type</th>
-              <th scope="col">Address</th>
-              <th scope="col">Contact</th>
-              <th>
-                <div class = "float-right">
-                    <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Employee <i class="fas fa-user-plus"></i></button>'.html_safe, new_employee_path %>
-                </div>
-              </th>
-            </tr>
-          </thead>
-            <tbody >
-              <% @employees.each do |employee| %>
-                <tr>
-                  <td><%= link_to "#{employee.name}", "/employee/task/#{employee.id}"%></td>
-                  <td><%= employee.emp_type %></td>
-                  <td><%= employee.address %></td>
-                  <td><%= employee.contact %></td>
-                  <td>
-                    <%= link_to 'Show', employee %>
-                    <%= link_to 'Edit', edit_employee_path(employee) %>
-                    <%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-        </table>
-      </div>
-    </div>
-    </div>
+<div class="parallax-container">
+  <div class="parallax">
+    <%=image_tag("back.jpg")%>
   </div>
+</div>
+
+<div class="section white">
+  <div class="row container">
+    <div>
+      <h1>Employees</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="table-responsive table-striped emp-table">
+            <table class="table text-center">
+              <thead class = "gradient">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Contact</th>
+                  <th>
+                    <div class = "float-right">
+                        <%= link_to '<button class = "btn btn-success btn-sm" type="button">Add Employee <i class="fas fa-user-plus"></i></button>'.html_safe, new_employee_path %>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+                <tbody >
+                  <% @employees.each do |employee| %>
+                    <tr>
+                      <td><%= link_to "#{employee.name}", "/employee/task/#{employee.id}"%></td>
+                      <td><%= employee.emp_type %></td>
+                      <td><%= employee.address %></td>
+                      <td><%= employee.contact %></td>
+                      <td>
+                        <%= link_to 'Show', employee %>
+                        <%= link_to 'Edit', edit_employee_path(employee) %>
+                        <%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax">
+    <%=image_tag("back.jpg")%>
+  </div>
+</div>

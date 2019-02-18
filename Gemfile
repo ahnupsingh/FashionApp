@@ -43,6 +43,8 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'faker'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

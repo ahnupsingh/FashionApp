@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require material_icons
  */
-@import "bootstrap";
+// @import "bootstrap";
+@import "materialize";
 @import "font-awesome";
 @import "notifications";
 @import "custom.scss";
