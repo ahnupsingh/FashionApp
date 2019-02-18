@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'employees#index'
 
   resources :tasks, :employees, :particulars, :bills, :users
+  resources :account_activations, only: [:edit]
 
   get '/signup', to: 'users#new', as: :signup
   post '/signup', to: 'users#create'
