@@ -40,6 +40,7 @@ gem 'cocoon'
 gem 'simple_form'
 gem 'bcrypt'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'faker'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
