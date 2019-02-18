@@ -12,9 +12,15 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery
-//= require bootstrap
+//= require turbolinks
 //= require cocoon
 //= require notifications
+//= require materialize
 //= require_tree .
+
+
+$(document).ready(function(){
+    $('.parallax').parallax();
+    $(".dropdown-trigger").dropdown();
+  });
